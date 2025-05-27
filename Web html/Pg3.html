@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프롤로그</title>
+    <style>
+        .memo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            
+            padding: 4px 12px;           /* 텍스트 주변 여백 */
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: rgba(240, 248, 255, 0.445);
+            
+            border: 2px solid rgba(240, 248, 255, 0.445);      /* 테두리만 */
+            background: transparent;     /* 배경 없음 (투명) */
+            border-radius: 6px;          /* 모서리 둥글게 */
+            
+            user-select: none;
+            z-index: 9999;
+            }
+        html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        }
+        body {
+        background-image: url('backgroundimg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eee;
+            }
+        .box {
+            width: 700px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 8px;
+
+            display: flex;             /* flex 컨테이너로 설정 */
+            justify-content: center;   /* 가로 중앙 정렬 */
+            align-items: center;       /* 세로 중앙 정렬 */
+            text-align: center;        /* 텍스트가 여러 줄일 때도 가운데 맞춤 */
+
+            
+            color: aliceblue;
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 8px;
+            }
+    </style>
+</head>
+<body>
+   <div class="memo">HASH 온라인 방탈출</div>
+
+    <!-- 프로로그 텍스트 영역 -->
+    <div class="box" id="prologue-text">
+        <!-- JavaScript가 이 내용을 동적으로 바꿉니다 -->
+        <p>로딩 중...</p>
+    </div>
+
+    <script>
+        const username = localStorage.getItem("username") || "참여자";
+        document.getElementById("prologue-text").innerHTML =
+            `<p><strong>${username}</strong>은/는 지금<br>
+             세계적인 해킹 집단의 본부에 있다.<br><br>
+             그들은 본부 곳곳에 이번 프로젝트에 대한<br>
+             정보를 비밀 언어로 숨겨놓고 소통한다.<br><br>
+             그들이 숨겨놓은 정보를 찾아내고,<br>
+             해석하여 이번 프로젝트의 성공을 막아라.</p>`;
+    </script>
+</body>
+</html>
