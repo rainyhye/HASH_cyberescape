@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프롤로그</title>
+    <title>HASH 온라인 방탈출</title>
     <style>
-        .memo {
+        /*왼쪽 위 HASH 방탈출 로고*/
+        .HASH {
             position: fixed;
             top: 10px;
             left: 10px;
@@ -22,27 +23,28 @@
             user-select: none;
             z-index: 9999;
             }
+        
+        /*전체 디자인*/
         html, body {
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
         }
+
+        /* 배경화면*/
         body {
         background-image: url('backgroundimg.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         }
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #eee;
-            }
+        /*반투명 검은 박스*/
         .box {
             width: 700px;
             height: 400px;
@@ -54,7 +56,6 @@
             justify-content: center;   /* 가로 중앙 정렬 */
             align-items: center;       /* 세로 중앙 정렬 */
             text-align: center;        /* 텍스트가 여러 줄일 때도 가운데 맞춤 */
-
             
             color: aliceblue;
             font-size: 30px;
@@ -64,7 +65,7 @@
     </style>
 </head>
 <body>
-    <div class="memo">HASH 온라인 방탈출</div>
+    <div class="HASH">HASH 온라인 방탈출</div>
     <div class="box">
         <p>세계적인 해킹 단체에서 6월 1일 새벽 4시,<br>대한민국 공공기관의 사이트를<br>해킹하려고 한다는 정보를 알아냈다.</p>
     </div>
