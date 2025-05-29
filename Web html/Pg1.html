@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시작</title>
+    <title>HASH 온라인 방탈출</title>
     <style>
-        .memo {
+        /*왼쪽 위 HASH 방탈출 로고*/
+        .HASH {
             position: fixed;
             top: 10px;
             left: 10px;
@@ -22,6 +23,8 @@
             user-select: none;
             z-index: 9999;
             }
+        
+        /*전체 디자인*/
         html, body {
         margin: 0;
         padding: 0;
@@ -29,13 +32,17 @@
         height: 100%;
         overflow: hidden;
         }
+
+        /* 배경화면*/
         body {
         background-image: url('backgroundimg.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         }
-        .answer-box {
+
+        /*이름 쓰는 박스*/
+        .name-box {
             width: 400px;
             height: 60px;
             font-size: 25px; 
@@ -47,13 +54,15 @@
             color:aliceblue;
             border: 2px solid rgba(248, 250, 255, 0.4);
         }
-        .answer-box:focus {
+        .name-box:focus {
             outline: none;
             background-color: rgba(0, 0, 0, 0.7);
             color: aliceblue;
             border: 2px solid rgba(248, 250, 255, 0.4);
         }
-                .submit {
+
+        /*제출 버튼*/
+        .submit {
             display: block;        
             margin: 20px auto;     
             width: 150px;          
@@ -66,26 +75,28 @@
         .submit:hover {
             box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.7); 
             }
-
     </style>
+
+<!-- 참가자 이름
     <script>
         function saveName() {
             const name = document.getElementById("name").value.trim();
             if (name) {
                 localStorage.setItem("username", name);
-                window.location.href = "prologue.html";  // 다음 페이지 파일명
+                window.location.href = "Pg3.";  // 다음 페이지 파일명
             } else {
                 alert("이름을 입력해주세요.");
             }
         }
     </script>
+-->
 </head>
 <body>
-    <div class="memo">HASH 온라인 방탈출</div>
-    <br><br><br><br><br><br><br><br><h1 style="font-size: 50px; color: aliceblue; text-align: center;">이름을 적어주세요.</h1>
+    <div class="HASH">HASH 온라인 방탈출</div>
+    <br><br><br><br><br><br><br><br><h1 style="font-size: 50px; color: aliceblue; text-align: center;">이름을 적어주세요.</h1><br>
     <div>
-        <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" class="answer-box"><br><br>
+        <label for="name"></label>
+            <input type="text" id="name" name="name" class="name-box"><br><br>
         <button type="submit" class="submit">완료</button>
     </div>
 </body>
