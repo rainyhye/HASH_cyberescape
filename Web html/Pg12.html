@@ -2,27 +2,47 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>정답 화면</title>
+    <title>HASH 온라인 방탈출</title>
     <style>
+        /*왼쪽 위 HASH 방탈출 로고*/
+        .HASH {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            
+            padding: 4px 12px;           /* 텍스트 주변 여백 */
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: rgba(240, 248, 255, 0.445);
+            
+            border: 2px solid rgba(240, 248, 255, 0.445);      /* 테두리만 */
+            background: transparent;     /* 배경 없음 (투명) */
+            border-radius: 6px;          /* 모서리 둥글게 */
+            
+            user-select: none;
+            z-index: 9999;
+            }
         body {
             margin: 0;
             padding: 0;
+            background: #ededed;
             width: 100vw;
             height: 100vh;
-            background: #d3d3d3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-        .container {
-            width: 100vw;
-            height: 100vh;
+
+        .wrapper {
+            width: 96vw;
+            height: 92vh;
+            background: #ccc;
+            margin: 2vw auto 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            border-radius: 6px;
         }
-        .emoji {
+
+        .icon {
             font-size: 120px;
             margin-bottom: 32px;
         }
@@ -54,8 +74,9 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="emoji">💡</div>
+    <div class="HASH">HASH 온라인 방탈출</div>
+    <div class="wrapper">
+        <div class="icon">💡</div>
         <div class="answer">정답입니다.</div>
         <div class="next-btn">다음 문제</div>
     </div>
