@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HASH 온라인 방탈출</title>
+  <style>
+    /* 상단 로고 */
+    .HASH {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      padding: 4px 12px;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      color: rgba(240, 248, 255, 0.445);
+      border: 2px solid rgba(240, 248, 255, 0.445);
+      background: transparent;
+      border-radius: 6px;
+      user-select: none;
+      z-index: 9999;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .question {
+      font-size: 50px;
+      margin: 100px 0 50px;
+      color: #333;
+      max-width: 600px;
+    }
+
+    .answer-box {
+      width: 500px;
+      height: 70px;
+      border-radius: 40px;
+      border: 2px solid #555;
+      padding: 10px 15px;
+      font-size: 18px;
+      outline: none;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    .answer-box:focus {
+      border-color: #003366;
+      box-shadow: 0 0 5px #003366;
+    }
+
+    .hint-button {
+      margin-top: 10px;
+      background-color: transparent;
+      color: #003366;
+      border: 2px solid transparent;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .hint-button:hover {
+      border-color: #efca51;
+      box-shadow: 0 0 10px rgb(255, 230, 0);
+    }
+
+    .hint-popup {
+      margin-top: 20px;
+      padding: 15px 20px;
+      background-color: #fffbea;
+      border: 2px solid #efca51;
+      border-radius: 15px;
+      font-size: 18px;
+      max-width: 500px;
+      display: none;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .clue-image {
+      margin: 20px 0;
+      width: 600px;
+      max-width: 90%;
+    }
+
+    footer {
+      background-color: #003366;
+      height: 70px;
+      width: 100%;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="HASH">HASH 온라인 방탈출</div>
+
+  <div class="container">
+    <div class="question">
+      책에 찍혀있는 지문은<br>몇 번째 지문일까?
+    </div>
+
+    <input type="text" class="answer-box" placeholder="답을 입력하세요" />
+    <button class="hint-button" onclick="toggleHint()">힌트 보기</button>
+
+<!-- 
+    <div class="hint-popup" id="hintBox">
+      지문은 모양에 따라 분류할 수 있어. <br>
+      줄만 있으면 궁상문, <br>
+      가운데에 동그라미 모양이 있으면 와상문, <br>
+      뿔 모양처럼 삐쭉 솟아있으면 제상문이라고 해!
+    </div>
+-->
+
+    <img src="지문.png" alt="지문 이미지" class="clue-image" />
+  </div>
+
+  <footer></footer>
+
+  <script>
+    function toggleHint() {
+      const hintBox = document.getElementById("hintBox");
+      if (hintBox) {
+        hintBox.style.display = hintBox.style.display === "none" || hintBox.style.display === "" ? "block" : "none";
+      }
+    }
+  </script>
+</body>
+</html>
