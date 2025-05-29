@@ -2,8 +2,26 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>정답이 아닙니다</title>
+    <title>HASH 온라인 방탈출</title>
     <style>
+        /*왼쪽 위 HASH 방탈출 로고*/
+        .HASH {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            
+            padding: 4px 12px;           /* 텍스트 주변 여백 */
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: rgba(240, 248, 255, 0.445);
+            
+            border: 2px solid rgba(240, 248, 255, 0.445);      /* 테두리만 */
+            background: transparent;     /* 배경 없음 (투명) */
+            border-radius: 6px;          /* 모서리 둥글게 */
+            
+            user-select: none;
+            z-index: 9999;
+            }
         body {
             margin: 0;
             padding: 0;
@@ -11,6 +29,7 @@
             width: 100vw;
             height: 100vh;
         }
+
         .wrapper {
             width: 96vw;
             height: 92vh;
@@ -34,7 +53,7 @@
             font-family: 'Arial Black', Arial, sans-serif;
             text-align: center;
         }
-        .btn {
+        .return-btn {
             width: 60vw;
             max-width: 700px;
             height: 70px;
@@ -51,20 +70,21 @@
             margin-bottom: 24px;
             transition: background 0.2s;
         }
-        .btn:last-child {
+        .return-btn:last-child {
             margin-bottom: 0;
         }
-        .btn:hover {
+        .return-btn:hover {
             background: #888;
         }
     </style>
 </head>
 <body>
+    <div class="HASH">HASH 온라인 방탈출</div>
     <div class="wrapper">
         <div class="icon">🚫</div>
         <div class="not-answer">정답이 아닙니다.</div>
-        <div class="btn">문제로 돌아가기</div>
-        <div class="btn">힌트 보기</div>
+        <div class="return-btn">문제로 돌아가기</div>
+        <div class="return-btn">힌트 보기</div>
     </div>
 </body>
 </html>
