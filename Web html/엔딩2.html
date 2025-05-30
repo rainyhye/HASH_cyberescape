@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HASH 온라인 방탈출</title>
+  <style>
+    .HASH {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      padding: 4px 12px;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      color: rgba(240, 248, 255, 0.445);
+      border: 2px solid rgba(240, 248, 255, 0.445);
+      background: transparent;
+      border-radius: 6px;
+      user-select: none;
+      z-index: 9999;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+    }
+
+    body {
+      background-image: url('backgroundimg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .box {
+      position: relative;
+      width: 700px;
+      height: 300px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      padding: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+
+      color: red;
+      font-size: 26px;
+      font-family: 'Courier New', monospace;
+
+      border: 2px solid red;
+      box-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red;
+      animation: fadeInBox 1s ease-out;
+    }
+
+    @keyframes fadeInBox {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .next-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      background: transparent;
+      color: red;
+      border: 2px solid red;
+      border-radius: 6px;
+      transition: 0.3s ease;
+      display: none; /* 기본 숨김 */
+    }
+
+    .next-btn:hover {
+      box-shadow: 0 0 10px red, 0 0 20px red;
+      background-color: rgba(255, 0, 0, 0.1);
+    }
+  </style>
+  <script>
+    const name = localStorage.getItem("username") || "참여자";
+    const message = `설마 ${name} 네가...?\n정말 이 모든 암호를 풀고,\n우리의 비밀 문자를\n알아낸 거라고...?`;
+    let index = 0;
+
+    function typeText() {
+      const container = document.getElementById("text");
+      if (index < message.length) {
+        container.innerHTML += message[index] === "\n" ? "<br>" : message[index];
+        index++;
+        setTimeout(typeText, 70);
+      } else {
+        // 타이핑 끝나면 버튼 표시
+        document.querySelector(".next-btn").style.display = "block";
+      }
+    }
+
+    function goNext() {
+      window.location.href = "Pg8.html";
+    }
+
+    window.onload = typeText;
+  </script>
+</head>
+<body>
+  <div class="HASH">HASH 온라인 방탈출</div>
+  <div class="box">
+    <p id="text"></p>
+    <button type="button" class="next-btn" onclick="goNext()">다음</button>
+  </div>
+</body>
+</html>
