@@ -43,6 +43,7 @@
 
 		/* 반투명 검은 박스 */
 		.box {
+                        position: relative;
 			width: 700px;
 			height: 400px;
 			background-color: rgba(0, 0, 0, 0.7);
@@ -57,13 +58,27 @@
 			color: aliceblue;
 			font-size: 30px;
 		}
+               .next-btn {
+                 position: absolute;
+                 bottom: 20px;
+                 right: 20px;
+                 padding: 10px 20px;
+                 font-size: 20px;
+                 cursor: pointer;
+               }
 	</style>
+        <script>
+            function goNext(){
+               window.location.href = "question1.html";
+             }
+        </script>
 </head>
 <body>
 	<div class="HASH">HASH 온라인 방탈출</div>
 
 	<div class="box">
 		<div id="prologue-text"></div>
+               <button type ="button" class="next-btn" onclick="goNext()">시작</button>
 	</div>
 
 	<script>
@@ -76,5 +91,6 @@
 			그들이 숨겨놓은 정보를 찾아내고,<br>
 			해석하여 이번 프로젝트의 성공을 막아라.</p>`;
 	</script>
+
 </body>
 </html>

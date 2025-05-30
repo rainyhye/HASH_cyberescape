@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HASH 온라인 방탈출</title>
   <style>
-    .memo {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      padding: 4px 12px;
-      font-size: 20px;
-      font-family: Arial, sans-serif;
-      color: rgba(240, 248, 255, 0.445);
-      border: 2px solid rgba(240, 248, 255, 0.445);
-      background: transparent;
-      border-radius: 6px;
-      user-select: none;
-      z-index: 9999;
-    }
+     .HASH {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 4px 12px;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: rgba(240, 248, 255, 0.445);
+            border: 2px solid rgba(240, 248, 255, 0.445);
+            background: transparent;
+            border-radius: 6px;
+            user-select: none;
+            z-index: 9999;
+        }
+
 
     html, body {
       margin: 0;
@@ -55,6 +56,7 @@
     }
 
     .box {
+      position: relative;
       width: 700px;
       height: 400px;
       background-color: rgba(0, 0, 0, 0.7); /* 검정 반투명 */
@@ -69,7 +71,22 @@
       color: aliceblue;
       font-size: 30px;
     }
+   .next-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            }
+
   </style>
+<script>
+function goNext(){
+window.location.href="Pg8.html";
+}
+</script>
+
 </head>
 <body>
   <div class="memo">HASH 온라인 방탈출</div>
@@ -81,6 +98,8 @@
       우리의 비밀 문자를<br />
       알아낸 거라고...?
     </p>
+	<button type ="button" class="next-btn" onclick="goNext()" >다음
+	</button>
   </div>
 
   <script>

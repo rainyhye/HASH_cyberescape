@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HASH 온라인인 방탈출</title>
+    <title>HASH 온라인 방탈출</title>
     <style>
-        /*왼쪽 위 HASH 방탈출 로고*/
         .HASH {
             position: fixed;
             top: 10px;
@@ -41,6 +40,7 @@
         }
 
         .box {
+	    position: relative;
             width: 700px;
             height: 300px;
             background-color: rgba(0, 0, 0, 0.7);
@@ -55,7 +55,21 @@
             color: aliceblue;
             font-size: 30px;
         }
+   .next-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            }
     </style>
+<script>
+function goNext(){
+window.location.href="Pg7.html";
+}
+</script>
+
 </head>
 <body>
     <div class="HASH">HASH 온라인 방탈출</div>
@@ -63,6 +77,8 @@
         <p>
         이럴 리가 없어.<br>우리의 비밀 문자는 완벽했어. <br>누구지? 누가 이걸 찾은 거지?
         </p>
+        <button type ="button" class="next-btn" onclick="goNext()" >다음
+	</button>
     </div>
 </body>
 </html>

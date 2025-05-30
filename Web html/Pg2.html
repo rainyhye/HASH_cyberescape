@@ -46,6 +46,7 @@
         }
         /*반투명 검은 박스*/
         .box {
+            position: relative;
             width: 700px;
             height: 400px;
             background-color: rgba(0, 0, 0, 0.7);
@@ -62,12 +63,30 @@
             padding: 10px;
             border-radius: 8px;
             }   
+         .next-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            }
     </style>
+<script>
+function goNext(){
+window.location.href="Pg3.html";
+}
+</script>
 </head>
 <body>
     <div class="HASH">HASH 온라인 방탈출</div>
     <div class="box">
-        <p>세계적인 해킹 단체에서 6월 1일 새벽 4시,<br>대한민국 공공기관의 사이트를<br>해킹하려고 한다는 정보를 알아냈다.</p>
+        <p>세계적인 해킹 단체에서 6월 1일 새벽 4시,<br>
+	      대한민국 공공기관의 사이트를<br>
+	      해킹하려고 한다는 정보를 알아냈다.</p>
+<button type ="button" class="next-btn" onclick="goNext()" 
+>다음
+</button>
     </div>
 </body>
 </html>

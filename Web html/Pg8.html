@@ -55,6 +55,7 @@
         }
 
         .box {
+            position: relative;
             width: 700px;
             height: 300px;
             background-color: rgba(0, 0, 0, 0.7);
@@ -69,7 +70,21 @@
             color: aliceblue;
             font-size: 30px;
         }
+   .next-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            }
+
     </style>
+<script>
+function goNext(){
+window.location.href="Pg9.html";
+}
+</script>
 </head>
 
 <body>
@@ -81,6 +96,8 @@
             하지만 잊지 마. <BR> 불 꺼진 새벽, 화면이 켜지면  <BR>
             <strong>“우리는 다시 나타날 것이다.”</strong>
         </p>
+<button type ="button" class="next-btn" onclick="goNext()" >다음
+	</button>
     </div>
 </body>
 </html>
